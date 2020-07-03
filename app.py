@@ -8,3 +8,10 @@ def hello():
 
 if __name__ == '__main__':
     app.run()
+
+@app.route('/<name>')
+def hello_name(name):
+    return "Hello {}!".format(name)
+
+if __name__ == '__main__':
+    app.run()
