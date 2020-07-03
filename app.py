@@ -10,13 +10,11 @@ app.config.from_object(os.environ['APP_SETTING'])
 def hello():
     return "Hello World!"
 
-if __name__ == '__main__':
-    app.run()
-
 @app.route('/<name>')
 def hello_name(name):
     return "Hello {}!".format(name)
 
 
 if __name__ == '__main__':
+    print(os.environ['APP_SETTING'])
     app.run()
